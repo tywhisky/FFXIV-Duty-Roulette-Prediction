@@ -4,14 +4,14 @@ using Dalamud.Interface.Windowing;
 using ImGuiNET;
 using ImGuiScene;
 
-namespace SamplePlugin.Windows;
+namespace RoulettePrediction.Windows;
 
 public class MainWindow : Window, IDisposable
 {
     private TextureWrap GoatImage;
-    private Plugin Plugin;
+    private RoulettePrediction Plugin;
 
-    public MainWindow(Plugin plugin, TextureWrap goatImage) : base(
+    public MainWindow(RoulettePrediction plugin, TextureWrap goatImage) : base(
         "My Amazing Window", ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse)
     {
         this.SizeConstraints = new WindowSizeConstraints

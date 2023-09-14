@@ -1,13 +1,13 @@
-﻿using Dalamud.Game.Command;
+using Dalamud.Game.Command;
 using Dalamud.IoC;
 using Dalamud.Plugin;
 using System.IO;
 using Dalamud.Interface.Windowing;
-using SamplePlugin.Windows;
+using RoulettePrediction.Windows;
 
-namespace SamplePlugin
+namespace RoulettePrediction
 {
-    public sealed class Plugin : IDalamudPlugin
+    public sealed class RoulettePrediction : IDalamudPlugin
     {
         public string Name => "Sample Plugin";
         private const string CommandName = "/pmycommand";
@@ -15,12 +15,12 @@ namespace SamplePlugin
         private DalamudPluginInterface PluginInterface { get; init; }
         private CommandManager CommandManager { get; init; }
         public Configuration Configuration { get; init; }
-        public WindowSystem WindowSystem = new("SamplePlugin");
+        public WindowSystem WindowSystem = new("RoulettePrediction");
 
         private ConfigWindow ConfigWindow { get; init; }
         private MainWindow MainWindow { get; init; }
 
-        public Plugin(
+        public RoulettePrediction(
             [RequiredVersion("1.0")] DalamudPluginInterface pluginInterface,
             [RequiredVersion("1.0")] CommandManager commandManager)
         {
